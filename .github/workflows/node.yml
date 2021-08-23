@@ -13,7 +13,8 @@ jobs:
       matrix:
         node: [ 
           '8.9.0',
-          '10.12.0'
+          '10.12.0',
+          '10.16.0'
         ]
 
     name: Node JS ${{ matrix.node }}

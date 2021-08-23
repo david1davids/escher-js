@@ -52,7 +52,7 @@
     "ramda": "^0.26.1",
     "recursive-readdir": "^2.2.2",
     "sinon": "^7.3.2",
-    "tape": "^4.10.1"
+    "tape": "^4.13.3"
   },
   "dependencies": {
     "dateformat": "3.0.2",

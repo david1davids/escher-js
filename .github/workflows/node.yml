@@ -1,0 +1,31 @@
+name: nodejs
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ 
+          '8.16.2',
+          '10.16.0'
+        ]
+
+    name: Node JS ${{ matrix.node }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+      
+      - name: Install
+        run: |
+          npm install
+      
+      - name: Test
+          npm test -- --verbose

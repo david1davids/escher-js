@@ -12,9 +12,10 @@ jobs:
     strategy:
       matrix:
         node: [ 
-          '8.9.0',
+          '12.22.5',
           '14.17.5',
-          '12.22.5'
+          '16.7.0'
+          
         ]
 
     name: Node JS ${{ matrix.node }}
